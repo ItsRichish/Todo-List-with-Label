@@ -49,10 +49,7 @@ const App = () => {
     setTasks([...tasks, task]);
   };
 
-  const handleEdit = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    id: string
-  ) => {
+  const handleEdit = (id: string) => {
     let t = tasks.find((i) => i.id === id);
     if (t) {
       setText(t.text);

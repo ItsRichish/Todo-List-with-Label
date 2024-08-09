@@ -11,7 +11,7 @@ interface TaskItemProps {
   };
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
-  onEdit: (e: React.MouseEvent<HTMLButtonElement>, id: string) => void;
+  onEdit: (id: string) => void;
 }
 
 const TaskItem: React.FC<TaskItemProps> = ({
@@ -46,7 +46,7 @@ const TaskItem: React.FC<TaskItemProps> = ({
         <div className="flex space-x-2">
           <button
             className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
-            onClick={(e) => onEdit(e, task.id)}
+            onClick={() => onEdit(task.id)}
           >
             <FaEdit />
           </button>
